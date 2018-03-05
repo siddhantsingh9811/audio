@@ -1,0 +1,42 @@
+.main
+{
+height: 600px;
+width: 300px;
+position: absolute;
+display: grid;
+grid-template-rows: 50% 50%;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%) scale(2.9);
+overflow: hidden;
+box-shadow: 0 3px 20px 1px #000;
+}
+.cover
+{
+	transition:0.5s;
+position: absolute;
+height: 300px;
+width: 600px;
+z-index: 200;
+background-color: #000000b0;
+top: -100%;
+}
+.menu
+{
+transition: 0.5s;
+height: 300px;
+width: 150px;
+background-color: white;
+position: absolute;
+top: -100%;
+z-index: 300;
+}
+
+$('.lines').click(function(){
+				$(".menu").css("top",'0');
+				$(".cover").css("top",'0');
+			})
+			$('.cross').click(function(){
+				$(".menu").css("top",'-100%');
+				$(".cover").css("top",'-100%');
+			})
